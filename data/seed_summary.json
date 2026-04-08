@@ -1,0 +1,32 @@
+{
+  "total_items": 16,
+  "intents": [
+    "advisor_contact",
+    "class_registration",
+    "dorm_application",
+    "enrollment_verification",
+    "health_insurance",
+    "library_access",
+    "lms_login",
+    "mental_health_support",
+    "missing_deadline",
+    "onboarding_checklist",
+    "orientation_schedule",
+    "room_change",
+    "scholarship_status",
+    "student_card",
+    "tuition_payment",
+    "wifi_access"
+  ],
+  "categories": [
+    "academic",
+    "administrative",
+    "finance",
+    "health",
+    "housing",
+    "it_account",
+    "library",
+    "onboarding",
+    "support_services"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "dataset_name": "vinuni_freshman_faq_seed_v1",
+  "version": "1.0.0",
+  "language": "vi",
+  "role": "freshman_student",
+  "items": [
+    {
+      "id": "FV-001",
+      "category": "onboarding",
+      "intent": "onboarding_checklist",
+      "question": "Em la tan sinh vien, tuan dau tien can hoan thanh nhung buoc nao?",
+      "answer": "Trong tuan dau, em hoan thanh checklist onboarding: kich hoat tai khoan, dang nhap portal/LMS, xem lich orientation, xac nhan hoc phi va ho so hanh chinh.",
+      "keywords": ["orientation", "checklist", "tuan dau"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-002",
+      "category": "onboarding",
+      "intent": "orientation_schedule",
+      "question": "Lich orientation cho tan sinh vien xem o dau?",
+      "answer": "Em vao portal sinh vien, muc thong bao onboarding de xem lich orientation theo khoa.",
+      "keywords": ["orientation", "lich", "portal"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-003",
+      "category": "it_account",
+      "intent": "lms_login",
+      "question": "Khong dang nhap duoc LMS thi can lam gi?",
+      "answer": "Em thu reset mat khau tai khoan truong va dang nhap lai. Neu van loi, tao ticket IT kem ma so sinh vien.",
+      "keywords": ["LMS", "dang nhap", "IT"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-004",
+      "category": "academic",
+      "intent": "class_registration",
+      "question": "Khi nao mo dang ky mon hoc ky dau?",
+      "answer": "Dang ky mon mo theo lich hoc vu tung ky. Em theo doi portal hoc vu va email thong bao.",
+      "keywords": ["dang ky mon", "hoc vu", "hoc ky"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-005",
+      "category": "academic",
+      "intent": "advisor_contact",
+      "question": "Lam sao de lien he co van hoc tap?",
+      "answer": "Thong tin co van hoc tap duoc hien thi tren portal sinh vien hoac email gioi thieu cua khoa.",
+      "keywords": ["co van hoc tap", "advisor"],
+      "priority": "medium"
+    },
+    {
+      "id": "FV-006",
+      "category": "administrative",
+      "intent": "student_card",
+      "question": "Thu tuc lam the sinh vien nhu the nao?",
+      "answer": "Em nop anh va thong tin theo mau tren portal, sau do theo doi ngay nhan the trong thong bao.",
+      "keywords": ["the sinh vien", "thu tuc"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-007",
+      "category": "administrative",
+      "intent": "enrollment_verification",
+      "question": "Xin giay xac nhan sinh vien o dau?",
+      "answer": "Em gui yeu cau qua cong dich vu sinh vien tren portal va theo doi trang thai xu ly.",
+      "keywords": ["giay xac nhan", "portal"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-008",
+      "category": "finance",
+      "intent": "tuition_payment",
+      "question": "Hoc phi ky dau dong bang cach nao?",
+      "answer": "Hoc phi thanh toan qua cong tai chinh tren portal. Em giu bien lai va kiem tra trang thai thanh toan.",
+      "keywords": ["hoc phi", "thanh toan"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-009",
+      "category": "finance",
+      "intent": "scholarship_status",
+      "question": "Em xem thong tin hoc bong o dau?",
+      "answer": "Thong tin hoc bong duoc cap nhat tren portal va email truong theo tung hoc ky.",
+      "keywords": ["hoc bong", "portal"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-010",
+      "category": "housing",
+      "intent": "dorm_application",
+      "question": "Dang ky ky tuc xa nhu the nao?",
+      "answer": "Em dang ky tren he thong housing, chon loai phong va tai giay to can thiet trong dot mo dang ky.",
+      "keywords": ["ky tuc xa", "housing", "dang ky"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-011",
+      "category": "housing",
+      "intent": "room_change",
+      "question": "Giua ky em co the doi phong ky tuc xa khong?",
+      "answer": "Viec doi phong phu thuoc cho trong va quy dinh housing. Em gui yeu cau tren he thong de duoc xet.",
+      "keywords": ["doi phong", "housing"],
+      "priority": "medium"
+    },
+    {
+      "id": "FV-012",
+      "category": "health",
+      "intent": "health_insurance",
+      "question": "Bao hiem y te bat buoc cho tan sinh vien khong?",
+      "answer": "Yeu cau bao hiem y te theo chinh sach tung nam hoc. Em can kiem tra thong bao onboarding moi nhat.",
+      "keywords": ["bao hiem y te", "onboarding"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-013",
+      "category": "library",
+      "intent": "library_access",
+      "question": "Lam sao de su dung thu vien va tai nguyen so?",
+      "answer": "Sau khi kich hoat tai khoan truong, em dang nhap he thong thu vien de muon sach va truy cap tai nguyen so.",
+      "keywords": ["thu vien", "tai nguyen so"],
+      "priority": "medium"
+    },
+    {
+      "id": "FV-014",
+      "category": "support_services",
+      "intent": "mental_health_support",
+      "question": "Neu em can ho tro tam ly thi lien he o dau?",
+      "answer": "Em lien he bo phan ho tro sinh vien hoac trung tam tu van tam ly qua kenh chinh thuc tren portal.",
+      "keywords": ["tam ly", "ho tro sinh vien"],
+      "priority": "high"
+    },
+    {
+      "id": "FV-015",
+      "category": "it_account",
+      "intent": "wifi_access",
+      "question": "Ket noi wifi trong truong bang tai khoan nao?",
+      "answer": "Em su dung tai khoan truong de dang nhap mang wifi noi bo theo huong dan IT.",
+      "keywords": ["wifi", "tai khoan truong"],
+      "priority": "medium"
+    },
+    {
+      "id": "FV-016",
+      "category": "onboarding",
+      "intent": "missing_deadline",
+      "question": "Neu em lo qua han mot buoc onboarding thi xu ly sao?",
+      "answer": "Em lien he ngay bo phan phu trach va tao yeu cau bo sung tren portal, dinh kem ly do neu can ngoai le.",
+      "keywords": ["qua han", "onboarding"],
+      "priority": "high"
+    }
+  ]
+}
