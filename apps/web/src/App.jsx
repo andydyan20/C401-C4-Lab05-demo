@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Send, AlertCircle, RefreshCcw, CheckCircle2, ChevronRight, Bot, HelpCircle, ArrowRight } from 'lucide-react';
 import Markdown from 'markdown-to-jsx';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = '/api';
 
 export default function App() {
   const [step, setStep] = useState('welcome'); // welcome, wizard, chat
