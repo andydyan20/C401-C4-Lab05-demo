@@ -24,6 +24,44 @@ class ChatResponse(BaseModel):
     meta: dict[str, Any] = Field(default_factory=dict)
 
 
+class SetupQuestion(BaseModel):
+    id: str
+    text: str
+    type: str  # select, text
+    options: list[str] | None = None
+
+
+class OnboardingSetupResponse(BaseModel):
+    questions: list[SetupQuestion]
+
+
+class OnboardingInitRequest(BaseModel):
+    answers: dict[str, str]
+
+
+class ChecklistTask(BaseModel):
+    id: str
+    title: str
+    status: str  # pending, completed
+    link: str | None = None
+
+
+class OnboardingInitResponse(BaseModel):
+    session_id: str
+    checklist: list[ChecklistTask]
+
+
+class ChecklistStatusResponse(BaseModel):
+    checklist: list[ChecklistTask]
+    progress: float
+
+
+class ActionFeedbackRequest(BaseModel):
+    session_id: str
+    action: str
+    feedback: str | None = None
+
+
 class RetrieveDebugResponse(BaseModel):
     query: str
     hits: list[dict[str, Any]]

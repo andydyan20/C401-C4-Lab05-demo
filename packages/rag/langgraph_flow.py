@@ -19,6 +19,7 @@ OUT_OF_SCOPE_HINTS = {
 class GraphState(TypedDict, total=False):
     question: str
     role: str
+    unit: str
     status: str
     action: str
     intent: str
