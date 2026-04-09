@@ -6,7 +6,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE_DIR))
 
-from apps.api.main import app
-
-# Vercel needs the app object to be named 'app'
-# Since we already named it 'app' in main.py, we just import it.
+try:
+    from apps.api.main import app
+except Exception as e:
+    import traceback
+    print("FATAL ERROR DURING IMPORT:")
+    print(traceback.format_exc())
+    # Re-raise so Vercel logs the failure
+    raise e

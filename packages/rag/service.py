@@ -49,11 +49,27 @@ class RagChatService:
             context_role = session["role_context"]
             unit = session["unit"]
 
-        state = self.graph.invoke({
-            "question": question, 
-            "role": context_role,
-            "unit": unit
-        })
+        try:
+            state = self.graph.invoke({
+                "question": question, 
+                "role": context_role,
+                "unit": unit
+            })
+        except Exception as e:
+            print(f"LLM ERROR: {e}")
+            # Fallback to pure retrieval if LLM fails
+            hits = self.retriever.search(question, role=context_role)
+            if hits:
+                best = hits[0].item
+                return {
+                    "answer": best["answer"],
+                    "intent": best["intent"],
+                    "status": "normal",
+                    "action": "answer",
+                    "citations": [{"id": best["id"], "category": best["category"], "intent": best["intent"]}],
+                    "meta": {"error": str(e), "fallback": True}
+                }
+            raise e
         
         return {
             "answer": state.get("answer", ""),
